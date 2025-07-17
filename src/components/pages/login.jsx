@@ -57,6 +57,9 @@ export default function Login() {
                         </div>
                         <Button className="sign-in-btn">Sign In</Button>
                     </form>
+                    <div className="reg-nav">
+                        <p>Don't have an account? <Link className="link">Sign up</Link></p>
+                    </div>
                 </CardContent>
             </Card>
         </div>
