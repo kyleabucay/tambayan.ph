@@ -1,0 +1,240 @@
+.featured-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    color: #000;
+}
+
+.featured-container, .tabs {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* TABS STYLES */
+.tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.tabs-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 4px;
+    height: 36px;
+}
+
+.tabs-trigger:focus {
+    border-radius: 8px;
+    padding: 4px 12px;
+    height: 36px;
+}
+
+/* Style the tabs-trigger */
+.tabs-trigger {
+    z-index: 1;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+    color: #64748b;
+    background-color: #f1f5f9;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.1s ease-in-out;
+    width: 15.63rem; /* Fixed width for consistent sliding */
+    text-align: center;
+}
+
+/* Active tab styling */
+.tabs-trigger.active {
+    color: #000; /* Keep text color consistent, customize if needed */
+    font-weight: 600; /* Slight emphasis for active tab */
+}
+
+.tabs-list::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 15.75rem; /* Matches tabs-trigger width */
+    height: calc(100% - 4px); /* Adjust for padding */
+    background-color: #ffffff; /* White slider, customize to match button */
+    border-radius: 8px; /* Slightly smaller for inner rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transform: translateX(calc(var(--active-index, 0) * 15.75rem));
+    transition: transform 0.2s ease-in-out; /* Smooth Apple-like slide */
+}
+
+.tabs-list:has(.tabs-trigger.active:nth-child(1))::before {
+    --active-index: 0; 
+}
+
+.tabs-list:has(.tabs-trigger.active:nth-child(2))::before {
+    --active-index: 1; 
+}
+
+/* Tabs content styling */
+.tabs-content {
+    display: none;
+}
+
+.tabs-content.active {
+    display: block;
+}
+
+/* Existing styles for content */
+.listing-grid {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+/* LISTING CARDS */
+.listing-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listing-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    height: 236px;
+}
+
+/* STYLES UNDER CARD COMPONENT */
+.heart-fav {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    border: none;
+    padding: 2px;
+    height: 2.25rem;
+    width: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.list-type {
+    position: absolute;
+    font-weight: 700;
+    background-color: #000;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 8px;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.card-img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-img:hover {
+    transform: scale(1.1);
+}
+
+/* STYLES UNDER CARD CONTENT COMPONENT */
+.card-content {
+    padding: 1.1rem;
+}
+
+.card-content h3 {
+    margin: 0 auto;
+    font-size: 1.35rem;
+}
+
+.card-content > p,  .price-location > p:nth-child(2) {
+    font-size: 0.95rem;
+    color: #6C727F;
+    font-weight: 500;
+}
+
+.card-content > p {
+    margin-top: 0.5rem;
+}
+
+.price-location {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-location > p {
+    margin: 0;
+}
+
+.price-location > p:nth-child(1) {
+    font-weight: 600;
+}
+
+
+/* VIEW BUTTON */
+.view-all-container {
+    text-align: center;
+    width: 15%;
+    margin: 2rem auto;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #64748b40;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.view-button {
+    font-weight: 600;
+    color: #000;
+}
+
+.view-all-container:hover {
+    background-color: #f1f5f9;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 1.875rem;
+    }
+
+    .listing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .listing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
