@@ -87,7 +87,7 @@ export default function Register() {
                         </Button>
                     </form>
                     <div className="reg-nav">
-                        <p>Already have an account? <Link className="link">Sign in</Link></p>
+                        <p>Already have an account? <Link to="/login" className="link">Sign in</Link></p>
                     </div>
                 </CardContent>
             </Card>
@@ -95,4 +95,4 @@ export default function Register() {
     )
 }
 
-// Kulang password visibility toggle
+// Kulang password visibility toggle - DONE

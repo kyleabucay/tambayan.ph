@@ -68,7 +68,7 @@ export default function Login() {
                         <Button className="sign-in-btn">Sign In</Button>
                     </form>
                     <div className="reg-nav">
-                        <p>Don't have an account? <Link className="link">Sign up</Link></p>
+                        <p>Don't have an account? <Link to="/register" className="link">Sign up</Link></p>
                     </div>
                 </CardContent>
             </Card>
@@ -77,4 +77,4 @@ export default function Login() {
 }
 
 // Placeholder #. To be substituted into authentication for facebook and google
-// Kulang password visibility toggle
+// Kulang password visibility toggle - DONE
