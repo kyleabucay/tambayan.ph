@@ -1,14 +1,21 @@
-import { Link } from "react-router-dom";
 import Card from "../ui/card";
 import CardHeader from "../ui/CardHeader";
 import CardContent from "../ui/CardContent";
 import Button from "../ui/Button"
-import { ArrowLeft, MailIcon, Lock } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, MailIcon, Lock, Eye, EyeOff } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import "../styles/login.css"
 
 export default function Login() {
+    const [showPass, setShowPass] = useState(false)
+
+    const togglePass = () => {
+        setShowPass(!showPass)
+    }
+
     return (
         <div className="login-page">
             <Card className="login-form">
@@ -45,7 +52,10 @@ export default function Login() {
                             <label htmlFor="password">Password</label>
                             <div className="input-pass">
                                 <Lock size={18} color="#64748B" className="icons" />
-                                <input type="password" placeholder="Enter your password" />
+                                <input type={showPass ? "text" : "password"} placeholder="Enter your password" />
+                                <Button className="eye-icon" onClick={() => togglePass()} type="button" >
+                                    {showPass ? <Eye size={20} /> : <EyeOff size={20} /> }
+                                </Button>
                             </div>
                         </div>
                         <div className="util-container">
