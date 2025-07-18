@@ -1,0 +1,93 @@
+.reg-page {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.reg-form {
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1.75rem 0.75rem;
+    width: 100%;
+    max-width: 512px;
+}
+
+/* CARD HEADER */
+.card-header-reg > h1 {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+}
+
+.card-header-reg > p {
+    font-weight: 500;
+    margin-bottom: 1.15rem;
+}
+
+.card-header-reg > p {
+    color: #6b7280;
+}
+
+/* CARD CONTENT */
+.card-content-reg {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+}
+
+.social-link-reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.6rem 0;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 116, 139, 0.25);
+    background-color: #ffffff;
+    font-weight: 600;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-link-reg:hover {
+    background-color: #f1f5f9;
+}
+
+.pass-container-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 1.15rem;
+}
+
+.name-container {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .name-container {
+        flex-wrap: wrap;
+    }
+}

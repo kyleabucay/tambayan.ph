@@ -4,6 +4,7 @@ import TabsTrigger from "../ui/tabstrigger"
 import TabsContent from "../ui/TabsContent"
 import ListingCard from "../ui/ListingCard"
 import { useMemo } from "react"
+import { Link } from "react-router-dom"
 import "../styles/listings.css"
 
 export default function FeaturedListings() {
@@ -120,7 +121,7 @@ export default function FeaturedListings() {
                         {dormCards}
                     </div>
                     <div className="view-all-container">
-                        <a href="/dorms" className="view-button">View All Dormitories</a>
+                        <Link to="/dorms" className="view-button">View All Dormitories</Link>
                     </div>
                 </TabsContent>
 
@@ -129,7 +130,7 @@ export default function FeaturedListings() {
                         {carinderiaCards}
                     </div>
                     <div className="view-all-container">
-                        <a href="/carinderias" className="view-button">View All Carinderias</a>
+                        <Link to="/carinderias" className="view-button">View All Carinderias</Link>
                     </div>
                 </TabsContent>
                 

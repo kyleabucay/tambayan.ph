@@ -67,3 +67,4 @@ export default function Login() {
 }
 
 // Placeholder #. To be substituted into authentication for facebook and google
+// Kulang password visibility toggle

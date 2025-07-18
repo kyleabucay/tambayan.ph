@@ -1,13 +1,15 @@
 .login-page {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem; /* to avoid edge clippings on small screens */
+    background-color: #ffffff;
 }
 
 .login-form {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
