@@ -1,0 +1,36 @@
+.listings-container {
+    width: 100%;
+    background-color: #E7E7E9
+}
+
+.dorm-listings {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 12rem 3rem;
+}
+
+.dorm-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dorm-header > h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.dorm-header > p {
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.search-form-establishments {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}

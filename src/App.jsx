@@ -11,12 +11,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LayoutRoute />} />
+        <Route path="/" element={<LayoutRoute />}>
           <Route index element={<Home />}/>
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
           <Route path="dorms" element={<DormsList />} />
           <Route path="carinderias" element={<CarinderiasList />} />
+        </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
