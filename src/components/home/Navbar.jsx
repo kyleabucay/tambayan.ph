@@ -12,7 +12,7 @@ export default function Navbar() {
 
                 <div className="nav-links">
                     <Link to="/dorms" className="nav-link">Dormitories</Link>
-                    <Link to="/carinderias" className="nav-link">Carienderias</Link>
+                    <Link to="/carinderias" className="nav-link">Carinderias</Link>
                     <div className="search-container">
                         <Search className="search-icon" />
                         <input type="text" placeholder="Search listings..." className="search-input" />
