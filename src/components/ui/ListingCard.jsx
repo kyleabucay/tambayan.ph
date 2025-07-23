@@ -8,8 +8,8 @@ import Badge from "./Badge"
 function ListingCard({ className, name, description, price, location, imageUrl, type, cardType, tags = [] }) {
     const badgeTypes = tags.map((tag, index) => {
         return (
-            <div className="badges" key={tag + index}>
-                <Badge>{tags[index]}</Badge>
+            <div key={tag + index}>
+                <Badge className="badges">{tags[index]}</Badge>
             </div>
         )
     })
@@ -23,7 +23,7 @@ function ListingCard({ className, name, description, price, location, imageUrl, 
                 </Button>
                 <Badge className={`list-type ${type === "Dorm" ? "dorm" : "carinderia"}`}>{type}</Badge>
             </Card>
-            <CardContent className="card-content">
+            <CardContent className={`card-content ${tags.length > 0 ? "list" : ""}`}>
                 <h3>{name}</h3>
                 <p>{description}</p>
                 <div className="price-location">

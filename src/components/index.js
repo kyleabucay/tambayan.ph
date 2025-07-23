@@ -58,7 +58,7 @@ export const featuredCarinderias = [
     }
 ]
 
-export const allFeaturedDorms = [
+export const allDorms = [
     {
         id: "1",
         name: "Magis Residences",
@@ -120,3 +120,5 @@ export const allFeaturedDorms = [
         tags: ["Near UP", "Cozy", "WiFi"],
       },
 ]
+
+// export const allCarinderias 

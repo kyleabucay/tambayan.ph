@@ -35,8 +35,9 @@
     width: 100%;
 }
 
+/* DORM CONTENT STYLES */
 .dorm-content {
-    padding: 2rem 12rem;
+    padding: 1rem 12rem 3rem;
     background-color: #fff;
 }
 
@@ -58,4 +59,22 @@
     overflow: hidden;
     border-radius: 8px 8px 0 0;
     height: 200px;
+}
+
+.view-more-container {
+    width: 15%;
+    margin: 2rem auto;
+    padding: 8px 0;
+}
+
+.view-more {
+    text-align: center;
+    padding: 4px 12px;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: transparent;
 }

@@ -2,11 +2,11 @@ import Button from "../ui/Button"
 import Input from "../ui/input"
 import { Search, MapPin } from "lucide-react"
 import ListingCard from "../ui/ListingCard"
-import { allFeaturedDorms } from ".."
+import { allDorms} from ".."
 import "../styles/dormslist.css"
 
 export default function DormsList() {
-    const dormCards = allFeaturedDorms.map(dorm => {
+    const dormCards = allDorms.map(dorm => {
         return (
             <ListingCard
                 className="listing-card-dorms"
@@ -56,9 +56,12 @@ export default function DormsList() {
                 </div>
             </div>
             <div className="dorm-content">
-                <h1>6 dormitories found</h1>
+                <h2>6 dormitories found</h2>
                 <div className="listing-grid">
                     {dormCards}
+                </div>
+                <div className="view-more-container">
+                    <Button className="view-more">View more</Button>
                 </div>
             </div>
         </div>

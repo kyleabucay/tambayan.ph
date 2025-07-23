@@ -1,5 +1,5 @@
 import Hero from "../home/hero"
-import FeaturedListings from "../home/featuredListings"
+import FeaturedListings from "../home/FeaturedListings"
 import Overview from "../home/Overview"
 import CtaSection from "../home/CtaSection"
 import Footer from "../home/Footer"

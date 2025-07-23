@@ -26,7 +26,7 @@ export default function Login() {
                     <h1>Welcome Back</h1>
                     <p>Sign in to your Tambayan.ph account</p>
                 </CardHeader>
-                <CardContent className="card-content">
+                <CardContent className="card-content-login">
                     <div className="social-links">
                         <Link to="/" className="social-link">
                             <FcGoogle size={24}/> Continue with Google
