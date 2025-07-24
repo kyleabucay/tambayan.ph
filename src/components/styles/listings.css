@@ -106,6 +106,7 @@
     justify-content: center;
     gap: 1.5rem;
     border-radius: 8px 8px 0 0;
+    contain: layout style;
 }
 
 /* LISTING CARDS */
@@ -218,7 +219,9 @@
 
 
 /* VIEW BUTTON */
-.view-all-container {
+.view-button {
+    display: flex;
+    justify-content: center;
     text-align: center;
     width: 15%;
     margin: 2rem auto;
@@ -227,14 +230,11 @@
     border: 1px solid #64748b40;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-}
-
-.view-button {
     font-weight: 600;
     color: #000;
 }
 
-.view-all-container:hover {
+.view-button:hover {
     background-color: #f1f5f9;
 }
 

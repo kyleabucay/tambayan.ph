@@ -63,18 +63,14 @@ export default function FeaturedListings() {
                     <div className="listing-grid">
                         {dormCards}
                     </div>
-                    <div className="view-all-container">
-                        <Link to="/dorms" className="view-button">View All Dormitories</Link>
-                    </div>
+                    <Link to="/dorms" className="view-button">View All Dormitories</Link>
                 </TabsContent>
 
                 <TabsContent value="carinderias">
                     <div className="listing-grid">
                         {carinderiaCards}
                     </div>
-                    <div className="view-all-container">
-                        <Link to="/carinderias" className="view-button">View All Carinderias</Link>
-                    </div>
+                    <Link to="/carinderias" className="view-button">View All Carinderias</Link>
                 </TabsContent>
                 
             </Tabs>

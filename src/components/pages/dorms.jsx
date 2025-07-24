@@ -2,12 +2,38 @@ import Button from "../ui/Button"
 import Input from "../ui/input"
 import { Search, MapPin } from "lucide-react"
 import ListingCard from "../ui/ListingCard"
-import { allDorms} from ".."
+import { allDorms } from ".."
 import "../styles/dormslist.css"
+import { useEffect, useMemo, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function DormsList() {
-    const dormCards = allDorms.map(dorm => {
-        return (
+    const [visibleCount, setVisibleCount] = useState(3)
+    const [visibleDorms, setVisibleDorms] = useState([])
+    const loadRef = useRef(null)
+
+    const itemsPerPage = 3
+    
+    useEffect(() => {
+        setVisibleDorms(allDorms.slice(0, 3))
+    }, [allDorms])
+    
+    const loadMore = () => {
+        const newCount = visibleCount + itemsPerPage
+        const newItems = allDorms.slice(visibleCount, newCount)
+        setVisibleDorms(prev => [...prev, ...newItems])
+        setVisibleCount(newCount)
+
+        setTimeout(() => {
+            if (loadRef.current) {
+                loadRef.current.scrollIntoView({ behavior: "smooth", block: "end" })
+            }
+        }, 50)
+    }
+
+    const dormCards = useMemo(() => {
+        return visibleDorms.map(dorm => (
+        <Link to={`${dorm.id}`} className="listing-links">
             <ListingCard
                 className="listing-card-dorms"
                 key={dorm.id}
@@ -21,8 +47,9 @@ export default function DormsList() {
                 cardType="card-dorm"
                 tags={dorm.tags}
             />
-        )}
-    )
+        </Link>
+        ))
+    }, [visibleDorms])
 
     return (
         <div className="listings-container">
@@ -57,12 +84,12 @@ export default function DormsList() {
             </div>
             <div className="dorm-content">
                 <h2>6 dormitories found</h2>
-                <div className="listing-grid">
+                <div className="listing-grid" ref={loadRef}>
                     {dormCards}
                 </div>
-                <div className="view-more-container">
-                    <Button className="view-more">View more</Button>
-                </div>
+                {visibleDorms.length < allDorms.length &&
+                <Button className="view-more" onClick={() => loadMore()}>View more</Button>
+                }
             </div>
         </div>
     )
