@@ -4,7 +4,6 @@
     align-items: center;
     min-height: 100vh;
     padding: 1rem 4.5rem 2.5rem;
-    /* border: 1px solid; */
 }
 
 .dorm-details-container {
@@ -103,4 +102,9 @@
 
 .carousel-navigate-icon {
     color: #000;
+}
+
+/* CONTENT DETAILS */
+.content-details {
+    padding: 1rem 3rem;
 }

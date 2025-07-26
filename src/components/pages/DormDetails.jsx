@@ -12,7 +12,12 @@ export default function DormDetails() {
     const { id } = useParams()
     console.log(id)
 
-    const { images, name } = mockDormitory
+    const { 
+        images,
+        name, 
+        price, 
+        location,
+        description } = mockDormitory
 
     const carouselImg = images.map((img, index) => {
         return (
@@ -39,6 +44,20 @@ export default function DormDetails() {
                 <EmblaCarousel options = {{ loop: true }}>
                     {carouselImg}
                 </EmblaCarousel>
+
+                <div className="content-details">
+                    <div className="details-sec-1">
+                        <h2>{name}</h2>
+                        <p>{location}</p>
+                        <p>{price}</p>
+                        <p>{description}</p>
+                    </div>
+                    <div></div>
+                    {/* <Tabs>
+
+                    </Tabs> */}
+                    <div></div>
+                </div>
             </div>
         </div>
     )
