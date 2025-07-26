@@ -122,3 +122,28 @@ export const allDorms = [
 ]
 
 // export const allCarinderias 
+
+export const mockDormitory = {
+    id: "1",
+    name: "Sunshine Student Residence",
+    description:
+      "A comfortable dormitory located just 5 minutes away from major universities. Offers clean rooms with basic amenities and 24/7 security.",
+    price: "₱4,500 - ₱6,000 / month",
+    location: "Sampaloc, Manila",
+    address: "1234 University Belt, Sampaloc, Manila",
+    contact: {
+      phone: "+63 912 345 6789",
+      email: "sunshine.dorm@example.com",
+    },
+    amenities: ["WiFi", "24/7 Security", "Study Area", "Laundry Service"],
+    rules: ["No Smoking", "No Pets", "Curfew at 10PM", "No Visitors After 8PM"],
+    gender: "Female Only",
+    distance: "0.5km from University",
+    availability: "Available from June 1, 2023",
+    images: [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&q=80",
+      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+      "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+    ],
+}
