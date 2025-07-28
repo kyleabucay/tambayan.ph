@@ -34,7 +34,13 @@
     gap: 6px;
     border-radius: 8px;
     border: 1.5px solid #cbd5e160;
-    padding: 6px 0.9rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #cbd5e160;
 }
 
 /* EMBLA CAROUSEL */
@@ -107,4 +113,110 @@
 /* CONTENT DETAILS */
 .content-details {
     padding: 1rem 3rem;
+}
+
+.details-sec-1 {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.15rem;
+}
+
+.listing-grid-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.overview-card-details {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid #e5e7eb;
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+/* TABS STYLES */
+.tabs-list-container.utilities {
+    margin-bottom: 1.25rem;
+}
+
+.tabs-list.utilities {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 4px;
+    height: 36px;
+    width: 100%;
+}
+
+.tabs-trigger:focus {
+    border-radius: 8px;
+    padding: 4px 12px;
+    height: 36px;
+}
+
+/* Style the tabs-trigger */
+.tabs-trigger.utilities {
+    z-index: 1;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+    color: #64748b;
+    background-color: #f1f5f9;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.1s ease-in-out;
+    width: 100%;
+    text-align: center;
+}
+
+/* Active tab styling */
+.tabs-trigger.active {
+    color: #000; /* Keep text color consistent, customize if needed */
+    font-weight: 600; /* Slight emphasis for active tab */
+}
+
+.tabs-list.utilities::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%; /* Matches tabs-trigger width */
+    height: calc(100% - 4px); /* Adjust for padding */
+    background-color: #ffffff; /* White slider, customize to match button */
+    border-radius: 8px; /* Slightly smaller for inner rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transform: translateX(calc(var(--active-index, 0) * 15.75rem));
+    transition: transform 0.2s ease-in-out; /* Smooth Apple-like slide */
+}
+
+.tabs-list.utilities:has(.tabs-trigger.active:nth-child(1))::before {
+    --active-index: 0; 
+}
+
+.tabs-list.utilities:has(.tabs-trigger.active:nth-child(2))::before {
+    --active-index: 2.365; 
+}
+
+.tabs-content-utilities {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* LOCATION STYLES */
+.location-container {
+    background-color: #f1f5f9;
+    height: 16rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

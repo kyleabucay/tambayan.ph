@@ -2,10 +2,16 @@ import { useLocation, useParams } from "react-router-dom"
 import "../styles/dorm-details.css"
 import { Link } from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
-import { Heart } from "lucide-react"
+import { Heart, MapPin, User, Calendar, Phone, Mail } from "lucide-react"
 import { mockDormitory } from ".."
-import Badge from "../ui/Badge"
+import Button from "../ui/Button"
+import Card from "../ui/card"
+import CardContent from "../ui/CardContent"
 import EmblaCarousel from "../ui/EmblaCarousel"
+import Tabs from "../ui/tabs"
+import TabsList from "../ui/tabslist"
+import TabsTrigger from "../ui/tabstrigger"
+import TabsContent from "../ui/TabsContent"
 
 
 export default function DormDetails() {
@@ -17,7 +23,14 @@ export default function DormDetails() {
         name, 
         price, 
         location,
-        description } = mockDormitory
+        description,
+        gender,
+        distance,
+        availability,
+        address,
+        contact,
+        amenities,
+        rules } = mockDormitory
 
     const carouselImg = images.map((img, index) => {
         return (
@@ -29,6 +42,24 @@ export default function DormDetails() {
         )
     })
 
+    const amenityEl = amenities.map((amenity, index) => {
+        return (
+            <li key={index}>
+                <div></div>
+                {amenity}
+            </li>
+        )
+    })
+
+    const rulesEl = rules.map((rule, index) => {
+        return (
+            <li key={index}>
+                <div></div>
+                {rule}
+            </li>
+        )
+    })
+
     return (
         <div className="dorm-details">
             <div className="dorm-details-container">
@@ -36,9 +67,9 @@ export default function DormDetails() {
                     <Link className="back-btn-details">
                         <ArrowLeft size={16} />Back
                     </Link>
-                    <Badge className="save-btn">
+                    <Button className="save-btn">
                         <Heart size={16} /> Save
-                    </Badge>
+                    </Button>
                 </div>
 
                 <EmblaCarousel options = {{ loop: true }}>
@@ -48,15 +79,93 @@ export default function DormDetails() {
                 <div className="content-details">
                     <div className="details-sec-1">
                         <h2>{name}</h2>
-                        <p>{location}</p>
+                        <p><span><MapPin /> {location}</span></p>
                         <p>{price}</p>
                         <p>{description}</p>
                     </div>
-                    <div></div>
-                    {/* <Tabs>
+                    <br />
+                    <div className="details-sec-2">
+                        <div className="listing-grid-details">
+                            <Card className="overview-card-details">
+                                <CardContent>
+                                    <h2>Dormitory Details</h2>
+                                    <div>
+                                        <div>
+                                            <User />
+                                            <div>
+                                                <p>Gender Restriction</p>
+                                                <p>{gender}</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <MapPin />
+                                            <div>
+                                                <p>Distance</p>
+                                                <p>{distance}</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Calendar />
+                                            <div>
+                                                <p>Availability</p>
+                                                <p>{availability}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
 
-                    </Tabs> */}
-                    <div></div>
+                            <Card className="overview-card-details">
+                                <CardContent>
+                                    <h2>Contact Information</h2>
+                                    <div>
+                                        <div>
+                                            <Phone />
+                                            <p>{contact.phone}</p>
+                                        </div>
+                                        <div>
+                                            <Mail />
+                                            <p>{contact.email}</p>
+                                        </div>
+                                        <div>
+                                            <MapPin />
+                                            <p>{address}</p>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+                    <br />
+                    <Tabs defaultValue="amenities">
+                        <div className="tabs-list-container utilities">
+                            <TabsList className="utilities">
+                                <TabsTrigger value="amenities" className="utilities">Amenities</TabsTrigger>
+                                <TabsTrigger value="house-rules" className="utilities">House Rules</TabsTrigger>
+                            </TabsList>
+                        </div>
+
+                        <div className="tabs-content-utilities">
+                            <TabsContent value="amenities">
+                                <ul>
+                                    {amenityEl}
+                                </ul>
+                            </TabsContent>
+
+                            <TabsContent value="house-rules">
+                                <ul>
+                                    {rulesEl}
+                                </ul>
+                            </TabsContent>
+                        </div>
+                    </Tabs>
+
+                    <div>
+                        <h2>Location</h2>
+                        <div className="location-container">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
