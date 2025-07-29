@@ -19,7 +19,7 @@ export default function Login() {
     return (
         <div className="login-page">
             <Card className="login-form">
-                <Link to="/" className="back-btn">
+                <Link to={-1} className="back-btn">
                         <ArrowLeft size={16} />Back
                 </Link>
                 <CardHeader className="card-header">

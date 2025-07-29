@@ -1,6 +1,5 @@
-import { useLocation, useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import "../styles/dorm-details.css"
-import { Link } from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
 import { Heart, MapPin, User, Calendar, Phone, Mail } from "lucide-react"
 import { mockDormitory } from ".."
@@ -44,8 +43,8 @@ export default function DormDetails() {
 
     const amenityEl = amenities.map((amenity, index) => {
         return (
-            <li key={index}>
-                <div></div>
+            <li key={index} className="li-grid">
+                <div className="li-grid-bullet"></div>
                 {amenity}
             </li>
         )
@@ -53,20 +52,22 @@ export default function DormDetails() {
 
     const rulesEl = rules.map((rule, index) => {
         return (
-            <li key={index}>
-                <div></div>
+            <li key={index} className="li-grid">
+                <div className="li-grid-bullet red"></div>
                 {rule}
             </li>
         )
     })
 
+    const navigate = useNavigate()
+
     return (
         <div className="dorm-details">
             <div className="dorm-details-container">
                 <div className="navbar-list-details">
-                    <Link className="back-btn-details">
+                    <Button className="back-btn-details" onClick={() => navigate(-1)}>
                         <ArrowLeft size={16} />Back
-                    </Link>
+                    </Button>
                     <Button className="save-btn">
                         <Heart size={16} /> Save
                     </Button>
@@ -169,7 +170,7 @@ export default function DormDetails() {
                             </TabsContent>
 
                             <TabsContent value="house-rules">
-                                <ul>
+                                <ul className="ul-grid">
                                     {rulesEl}
                                 </ul>
                             </TabsContent>

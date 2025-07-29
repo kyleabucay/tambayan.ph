@@ -1,7 +1,7 @@
 export const featuredDorms = [
     {
         id: "1",
-        name: "Magis Residences",
+        name: "Xavier Residences",
         description: "Modern dormitory with complete amenities near Xavier University",
         price: "₱4,000 - ₱6,000",
         location: "Pueblo de Oro, Cagayan de Oro",
@@ -61,7 +61,7 @@ export const featuredCarinderias = [
 export const allDorms = [
     {
         id: "1",
-        name: "Magis Residences",
+        name: "Xavier Residences",
         description: "Modern dormitory with complete amenities near Xavier University",
         price: "₱4,000 - ₱6,000",
         location: "Pueblo de Oro, Cagayan de Oro",
@@ -125,15 +125,15 @@ export const allDorms = [
 
 export const mockDormitory = {
     id: "1",
-    name: "Sunshine Student Residence",
+    name: "Xavier Residences",
     description:
       "A comfortable dormitory located just 5 minutes away from major universities. Offers clean rooms with basic amenities and 24/7 security.",
-    price: "₱4,500 - ₱6,000 / month",
-    location: "Sampaloc, Manila",
-    address: "1234 University Belt, Sampaloc, Manila",
+    price: "₱4,000 - ₱6,000 / month",
+    location: "Pueblo de Oro, Cagayan de Oro City",
+    address: "1234 Monte Avenue, Pueblo de Oro, Cagayan de Oro City",
     contact: {
       phone: "+63 912 345 6789",
-      email: "sunshine.dorm@example.com",
+      email: "xavierresidences.dorm@edu.ph",
     },
     amenities: ["WiFi", "24/7 Security", "Study Area", "Laundry Service"],
     rules: ["No Smoking", "No Pets", "Curfew at 10PM", "No Visitors After 8PM"],

@@ -26,18 +26,22 @@
 .back-btn-details, .save-btn {
     display: flex;
     align-items: center;
+    gap: 6px;
     padding: 12px 16px;
     border-radius: 8px;
     color: #000;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.back-btn-details {
+    font-size: 0.9rem;
+    border: none;
+    background: none;
 }
 
 .save-btn {
-    gap: 6px;
-    border-radius: 8px;
     border: 1.5px solid #cbd5e160;
-    padding: 12px 16px;
-    cursor: pointer;
     background-color: #fff;
 }
 
@@ -233,8 +237,6 @@
     margin: 0;
 }
 
-
-
 /* ----------- */
 
 /* TABS STYLES */
@@ -308,6 +310,34 @@
     border: 1.5px solid #e5e7eb;
     border-radius: 8px;
 }
+
+/* ----------- */
+
+/* LIST STYLES */
+.ul-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    list-style-type: none;
+}
+
+.li-grid {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.li-grid-bullet {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 9999px;
+    background-color: #000;
+}
+
+.li-grid-bullet.red {
+    background-color: red;
+}
+
 
 /* LOCATION STYLES */
 .location-container {

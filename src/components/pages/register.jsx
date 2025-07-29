@@ -17,7 +17,7 @@ export default function Register() {
     return (
         <div className="reg-page">
             <Card className="reg-form">
-                <Link to="/" className="back-btn">
+                <Link to={-1} className="back-btn">
                         <ArrowLeft size={16} />Back
                 </Link>
                 <CardHeader className="card-header-reg">
