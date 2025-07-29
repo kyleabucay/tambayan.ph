@@ -139,7 +139,7 @@ export const mockDormitory = {
     rules: ["No Smoking", "No Pets", "Curfew at 10PM", "No Visitors After 8PM"],
     gender: "Female Only",
     distance: "0.5km from University",
-    availability: "Available from June 1, 2023",
+    availability: "Available from June 1, 2025",
     images: [
       "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
       "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&q=80",

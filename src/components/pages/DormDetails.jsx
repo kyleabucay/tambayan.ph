@@ -79,34 +79,41 @@ export default function DormDetails() {
                 <div className="content-details">
                     <div className="details-sec-1">
                         <h2>{name}</h2>
-                        <p><span><MapPin /> {location}</span></p>
+                        <p>
+                            <MapPin size={16}/> {location}
+                        </p>
                         <p>{price}</p>
                         <p>{description}</p>
                     </div>
+
                     <br />
+
                     <div className="details-sec-2">
                         <div className="listing-grid-details">
                             <Card className="overview-card-details">
                                 <CardContent>
                                     <h2>Dormitory Details</h2>
-                                    <div>
-                                        <div>
-                                            <User />
-                                            <div>
+                                    <div className="details-margin-top">
+
+                                        <div className="icon-flex-start">
+                                            <User className="icon-detail" />
+                                            <div className="flex-details-dorm">
                                                 <p>Gender Restriction</p>
                                                 <p>{gender}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <MapPin />
-                                            <div>
+
+                                        <div className="icon-flex-start">
+                                            <MapPin className="icon-detail" />
+                                            <div className="flex-details-dorm">
                                                 <p>Distance</p>
                                                 <p>{distance}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <Calendar />
-                                            <div>
+
+                                        <div className="icon-flex-start">
+                                            <Calendar  className="icon-detail" />
+                                            <div className="flex-details-dorm">
                                                 <p>Availability</p>
                                                 <p>{availability}</p>
                                             </div>
@@ -118,18 +125,27 @@ export default function DormDetails() {
                             <Card className="overview-card-details">
                                 <CardContent>
                                     <h2>Contact Information</h2>
-                                    <div>
-                                        <div>
-                                            <Phone />
-                                            <p>{contact.phone}</p>
+                                    <div className="details-margin-top">
+
+                                        <div className="icon-flex-start">
+                                            <div className="flex-details-contact">
+                                                <Phone className="icon-detail" />
+                                                {contact.phone}
+                                            </div>
                                         </div>
-                                        <div>
-                                            <Mail />
-                                            <p>{contact.email}</p>
+
+                                        <div className="icon-flex-start">
+                                            <div className="flex-details-contact">
+                                                <Mail className="icon-detail" />
+                                                {contact.email}
+                                            </div>
                                         </div>
-                                        <div>
-                                            <MapPin />
-                                            <p>{address}</p>
+
+                                        <div className="icon-flex-start">
+                                            <div className="flex-details-contact">
+                                                <MapPin className="icon-detail" />
+                                                {address}
+                                            </div>
                                         </div>
                                     </div>
                                 </CardContent>
@@ -147,7 +163,7 @@ export default function DormDetails() {
 
                         <div className="tabs-content-utilities">
                             <TabsContent value="amenities">
-                                <ul>
+                                <ul className="ul-grid">
                                     {amenityEl}
                                 </ul>
                             </TabsContent>
@@ -163,7 +179,7 @@ export default function DormDetails() {
                     <div>
                         <h2>Location</h2>
                         <div className="location-container">
-
+                            {/* Insert API for Google Maps Location  */}
                         </div>
                     </div>
                 </div>

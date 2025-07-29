@@ -26,6 +26,8 @@
 .back-btn-details, .save-btn {
     display: flex;
     align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
     color: #000;
     font-weight: 500;
 }
@@ -39,7 +41,7 @@
     background-color: #fff;
 }
 
-.save-btn:hover {
+.save-btn:hover, .back-btn-details:hover {
     background-color: #cbd5e160;
 }
 
@@ -49,7 +51,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    /* padding: 0 0 0 9rem; */
     width: 100%;
 }
 
@@ -110,16 +111,58 @@
     color: #000;
 }
 
-/* CONTENT DETAILS */
+/* ----------- */
+
 .content-details {
     padding: 1rem 3rem;
 }
 
+
+/* ----------- */
+
+/* SECTION 1 STYLES */
 .details-sec-1 {
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 1.15rem;
+    padding-bottom: 1.5rem;
 }
 
+.details-sec-1 > h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.details-sec-1 > p:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    color: #6C727F;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    gap: 6px;
+}
+
+.details-sec-1 > p:nth-of-type(2) {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.details-sec-1 > p:nth-of-type(3) {
+    line-height: 1.6;
+    color: #6C727F;
+    font-weight: 500;
+}
+ 
+.details-sec-1 > p:nth-of-type(2),
+.details-sec-1 > p:nth-of-type(3) {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* ----------- */
+
+/* CARD STYLES */
 .listing-grid-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,14 +173,69 @@
 .overview-card-details {
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1.5px solid #e5e7eb;
     background-color: #ffffff;
-    padding: 2rem 1rem;
+    padding: 1rem 1.5rem;
     width: 100%;
 }
+
+.overview-card-details h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+/* DORM CARD DETAILS STYLES */
+.details-margin-top > * + * { 
+    margin-top: 0.75rem;
+    /* Shortcut in targeting all elements after it */
+}
+
+.icon-flex-start {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.icon-detail {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #6C727F;
+}
+
+/* .flex-details p {
+    border: 1px solid;
+} */
+
+.flex-details-dorm p:nth-of-type(1) {
+    margin: 0;
+    font-weight: 600;
+}
+
+.flex-details-dorm p:nth-of-type(2) {
+    margin-top: 0.15rem;
+    color: #6C727F;
+    font-weight: 500;
+}
+
+/* CONTACT CARD DETAILS STYLES */
+.flex-details-contact {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.flex-details-contact p {
+    margin: 0;
+}
+
+
+
+/* ----------- */
 
 /* TABS STYLES */
 .tabs-list-container.utilities {
