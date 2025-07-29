@@ -121,7 +121,69 @@ export const allDorms = [
       },
 ]
 
-// export const allCarinderias 
+export const allCarinderias = [
+    {
+      id: "1",
+      name: "Aling Nena's Carinderia",
+      description: "Home-cooked Filipino meals at student-friendly prices",
+      price: "₱60 - ₱100",
+      location: "España Boulevard, Manila",
+      imageUrl:
+        "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
+      tags: ["Ulam", "Budget", "Home-cooked"],
+    },
+    {
+      id: "2",
+      name: "Kuya Ben's Lutong Bahay",
+      description: "Affordable silog meals and Filipino classics",
+      price: "₱50 - ₱90",
+      location: "P. Noval St, Manila",
+      imageUrl:
+        "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80",
+      tags: ["Silog", "Breakfast", "Filipino"],
+    },
+    {
+      id: "3",
+      name: "Ate Lorna's Eatery",
+      description: "Budget-friendly meals with vegetarian options",
+      price: "₱45 - ₱85",
+      location: "Kalayaan Avenue, Quezon City",
+      imageUrl:
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      tags: ["Vegetarian", "Budget", "Healthy"],
+    },
+    {
+      id: "4",
+      name: "Tito's Merienda Corner",
+      description: "Best merienda spot with fresh lumpia and halo-halo",
+      price: "₱30 - ₱70",
+      location: "Taft Avenue, Manila",
+      imageUrl:
+        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&q=80",
+      tags: ["Merienda", "Lumpia", "Halo-halo"],
+    },
+    {
+      id: "5",
+      name: "Nanay's Kitchen",
+      description: "Traditional Filipino dishes like your mom used to make",
+      price: "₱70 - ₱120",
+      location: "Sampaloc, Manila",
+      imageUrl:
+        "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",
+      tags: ["Traditional", "Ulam", "Home-style"],
+    },
+    {
+      id: "6",
+      name: "Student's Choice Eatery",
+      description: "Quick and affordable meals perfect for busy students",
+      price: "₱40 - ₱80",
+      location: "Katipunan, Quezon City",
+      imageUrl:
+        "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
+      tags: ["Quick", "Student-friendly", "Affordable"],
+    },
+]
+
 
 export const mockDormitory = {
     id: "1",

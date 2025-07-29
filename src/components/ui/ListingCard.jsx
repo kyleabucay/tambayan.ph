@@ -4,9 +4,8 @@ import CardContent from "./CardContent"
 import { Heart } from "lucide-react"
 import Button from "./Button"
 import Badge from "./Badge"
-import { useEffect } from "react"
 
-function ListingCard({ className, name, description, price, location, imageUrl, type, cardType, tags = [], id }) {
+function ListingCard({ className, name, description, price, location, imageUrl, type, cardType, tags = [] }) {
     const badgeTypes = tags.map((tag, index) => {
         return (
             <div key={tag + index}>

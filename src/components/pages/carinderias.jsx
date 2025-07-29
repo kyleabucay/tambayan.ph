@@ -1,13 +1,54 @@
 import Button from "../ui/Button"
 import Input from "../ui/input"
 import { Search, MapPin } from "lucide-react"
+import { allCarinderias } from ".."
+import { useEffect, useMemo, useRef, useState } from "react"
+import ListingCard from "../ui/ListingCard"
+import { Link } from "react-router-dom"
 
 export default function CarinderiasList() {
+    const [visibleItems, setVisibleItems] = useState(3)
+    const [visibleCarinderia, setVisibleCarinderia] = useState([])
+    const loadRef = useRef(null)
+
+    const itemsPerPage = 3
+
+    useEffect(() => {
+        setVisibleItems(allCarinderias.slice(0,3))
+    }, [allCarinderias])
+
+    const loadMore = () => {
+        const newCount = visibleItems + itemsPerPage
+        const newItems = allCarinderias.slice(newCount)
+        setVisibleCarinderia(prev => [...prev, newItems])
+        setVisibleItems(newCount)
+    }
+
+    const carinderiaCards = useMemo(() => {
+        return visibleCarinderia.map(carinderia => (
+            <Link className="listing-links">
+                <ListingCard
+                    className="listing-card-dorms"
+                    key={carinderia.id}
+                    id={carinderia.id}
+                    name={carinderia.name}
+                    description={carinderia.description}
+                    price={carinderia.price}
+                    location={carinderia.location}
+                    imageUrl={carinderia.imageUrl}
+                    type="Carinderia"
+                    cardType="card-carinderia"
+                    tags={carinderia.tags}
+                />
+            </Link>
+        ))
+    }, [visibleCarinderia])
+
     return (
         <div className="listings-container">
             <div className="dorm-listings">
                 <div className="dorm-header">
-                    <h1>Find Your Perfect Carinderia</h1>
+                    <h1>Find Your Favorite Carinderia</h1>
                     <p>Discover affordable and comfortable student housing near your school</p>
                     <div className="search-form-establishments">
                         <div className="search-form-inner">
@@ -33,6 +74,15 @@ export default function CarinderiasList() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="dorm-content">
+                <h2>6 carinderias found</h2>
+                <div className="listing-grid" ref={loadRef}>
+                    {carinderiaCards}
+                </div>
+                {visibleCarinderia.length < allCarinderias.length &&
+                <Button className="view-more" onClick={() => loadMore()}>View more</Button>
+                }
             </div>
         </div>
     )
