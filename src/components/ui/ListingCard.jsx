@@ -16,7 +16,7 @@ function ListingCard({ className, name, description, price, location, imageUrl, 
 
     return (
         <div className={className}>
-            <Card className={cardType}>
+            <Card className="card-dorm">
                 <img src={imageUrl} alt={name} className="card-img"/>
                 <Button className="heart-fav">
                     <Heart color="#64748b" size={20} />

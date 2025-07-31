@@ -159,7 +159,7 @@ export const allCarinderias = [
       price: "₱30 - ₱70",
       location: "Taft Avenue, Manila",
       imageUrl:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&q=80",
+        "https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tags: ["Merienda", "Lumpia", "Halo-halo"],
     },
     {
@@ -180,7 +180,7 @@ export const allCarinderias = [
       location: "Katipunan, Quezon City",
       imageUrl:
         "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
-      tags: ["Quick", "Student-friendly", "Affordable"],
+      tags: ["Student-friendly", "Affordable"],
     },
 ]
 
@@ -209,3 +209,25 @@ export const mockDormitory = {
       "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
     ],
 }
+
+export const mockCarinderia = {
+  id: "1",
+  name: "Aling Nena's Carinderia",
+  description: "Home-cooked Filipino meals at student-friendly prices. A popular spot for students craving affordable yet flavorful dishes.",
+  price: "₱60 - ₱100 / meal",
+  location: "España Boulevard, Manila",
+  address: "678 Mabini Street, Sampaloc, Manila, Metro Manila",
+  contact: {
+    phone: "+63 917 123 4567",
+    email: "alingnena.carinderia@gmail.com",
+  },
+  menu: ["Adobo", "Sinigang", "Tinola", "Tortang Talong", "Pork BBQ"],
+  tags: ["Ulam", "Budget", "Home-cooked", "Rice Meals"],
+  distance: "300m from University of Santo Tomas",
+  availability: "Open Daily, 8:00 AM  - 9:00 PM",
+  images: [
+    "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
+    "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=800&q=80",
+    "https://images.unsplash.com/photo-1534596382981-1974b10d4e1a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ],
+};

@@ -7,26 +7,31 @@ import ListingCard from "../ui/ListingCard"
 import { Link } from "react-router-dom"
 
 export default function CarinderiasList() {
-    const [visibleItems, setVisibleItems] = useState(3)
+    const [visibleCount, setVisibleCount] = useState(3)
     const [visibleCarinderia, setVisibleCarinderia] = useState([])
+    const itemsPerPage = 3
     const loadRef = useRef(null)
 
-    const itemsPerPage = 3
-
     useEffect(() => {
-        setVisibleItems(allCarinderias.slice(0,3))
+        setVisibleCarinderia(allCarinderias.slice(0, 3))
     }, [allCarinderias])
 
     const loadMore = () => {
-        const newCount = visibleItems + itemsPerPage
-        const newItems = allCarinderias.slice(newCount)
-        setVisibleCarinderia(prev => [...prev, newItems])
-        setVisibleItems(newCount)
+        const newCount = visibleCount + itemsPerPage
+        const newItems = allCarinderias.slice(visibleCount, newCount)
+        setVisibleCarinderia(prev => [...prev, ...newItems])
+        setVisibleCount(newCount)
+
+        setTimeout(() => {
+            if (loadRef.current) {
+                loadRef.current.scrollIntoView({ behavior: "smooth", block: "end" })
+            }
+        }, 50);
     }
 
     const carinderiaCards = useMemo(() => {
         return visibleCarinderia.map(carinderia => (
-            <Link className="listing-links">
+            <Link to={carinderia.id} className="listing-links">
                 <ListingCard
                     className="listing-card-dorms"
                     key={carinderia.id}
@@ -37,13 +42,12 @@ export default function CarinderiasList() {
                     location={carinderia.location}
                     imageUrl={carinderia.imageUrl}
                     type="Carinderia"
-                    cardType="card-carinderia"
                     tags={carinderia.tags}
                 />
             </Link>
         ))
     }, [visibleCarinderia])
-
+    
     return (
         <div className="listings-container">
             <div className="dorm-listings">
@@ -87,3 +91,44 @@ export default function CarinderiasList() {
         </div>
     )
 }
+
+
+
+
+
+// const [visibleItems, setVisibleItems] = useState(3)
+    // const [visibleCarinderia, setVisibleCarinderia] = useState([])
+    // const loadRef = useRef(null)
+
+    // const itemsPerPage = 3
+
+    // useEffect(() => {
+    //     setVisibleItems(allCarinderias.slice(0,3))
+    // }, [allCarinderias])
+
+    // const loadMore = () => {
+    //     const newCount = visibleItems + itemsPerPage
+    //     const newItems = allCarinderias.slice(newCount)
+    //     setVisibleCarinderia(prev => [...prev, newItems])
+    //     setVisibleItems(newCount)
+    // }
+
+    // const carinderiaCards = useMemo(() => {
+    //     return visibleCarinderia.map(carinderia => (
+    //         <Link className="listing-links">
+    //             <ListingCard
+    //                 className="listing-card-dorms"
+    //                 key={carinderia.id}
+    //                 id={carinderia.id}
+    //                 name={carinderia.name}
+    //                 description={carinderia.description}
+    //                 price={carinderia.price}
+    //                 location={carinderia.location}
+    //                 imageUrl={carinderia.imageUrl}
+    //                 type="Carinderia"
+    //                 cardType="card-carinderia"
+    //                 tags={carinderia.tags}
+    //             />
+    //         </Link>
+    //     ))
+    // }, [visibleCarinderia])

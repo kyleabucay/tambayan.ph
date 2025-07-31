@@ -44,7 +44,6 @@ export default function DormsList() {
                 location={dorm.location}
                 imageUrl={dorm.imageUrl}
                 type="Dorm"
-                cardType="card-dorm"
                 tags={dorm.tags}
             />
         </Link>
