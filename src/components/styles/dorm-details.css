@@ -209,10 +209,6 @@
     color: #6C727F;
 }
 
-/* .flex-details p {
-    border: 1px solid;
-} */
-
 .flex-details-dorm p:nth-of-type(1) {
     margin: 0;
     font-weight: 600;
@@ -347,4 +343,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* CARINDERIA STYLES */
+.listing-grid-details.carinderia {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 2rem;
 }
