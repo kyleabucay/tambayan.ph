@@ -3,7 +3,7 @@ import Navbar from "../home/navbar"
 
 export default function LayoutRoute() {
     return (
-        <div className="main-container">
+        <div className="layout-container">
             <Navbar />
             <Outlet />
         </div>

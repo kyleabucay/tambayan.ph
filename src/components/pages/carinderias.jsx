@@ -31,10 +31,9 @@ export default function CarinderiasList() {
 
     const carinderiaCards = useMemo(() => {
         return visibleCarinderia.map(carinderia => (
-            <Link to={carinderia.id} className="listing-links">
+            <Link to={carinderia.id} key={carinderia.id} className="listing-links">
                 <ListingCard
                     className="listing-card-dorms"
-                    key={carinderia.id}
                     id={carinderia.id}
                     name={carinderia.name}
                     description={carinderia.description}

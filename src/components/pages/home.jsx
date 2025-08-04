@@ -6,12 +6,12 @@ import Footer from "../home/Footer"
 
 export default function Home() {
     return (
-        <>
+        <div className="main-container">
             <Hero />
             <FeaturedListings />
             <Overview />
             <CtaSection />
             <Footer />
-        </>
+        </div>
     )
 }

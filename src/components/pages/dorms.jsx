@@ -33,10 +33,9 @@ export default function DormsList() {
 
     const dormCards = useMemo(() => {
         return visibleDorms.map(dorm => (
-        <Link to={`${dorm.id}`} className="listing-links">
+        <Link to={`${dorm.id}`} key={dorm.id} className="listing-links">
             <ListingCard
                 className="listing-card-dorms"
-                key={dorm.id}
                 id={dorm.id}
                 name={dorm.name}
                 description={dorm.description}
