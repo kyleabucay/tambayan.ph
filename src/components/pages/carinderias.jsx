@@ -53,7 +53,7 @@ export default function CarinderiasList() {
                 <div className="dorm-header">
                     <h1>Find Your Favorite Carinderia</h1>
                     <p>Discover affordable and comfortable student housing near your school</p>
-                    <div className="search-form-establishments">
+                    <div className="search-form">
                         <div className="search-form-inner">
                             <div className="search-input-container">
                                 <Search className="input-icon" size={18} />
@@ -80,7 +80,7 @@ export default function CarinderiasList() {
             </div>
             <div className="dorm-content">
                 <h2>6 carinderias found</h2>
-                <div className="listing-grid" ref={loadRef}>
+                <div className="listing-grid shrink" ref={loadRef}>
                     {carinderiaCards}
                 </div>
                 {visibleCarinderia.length < allCarinderias.length &&
@@ -90,44 +90,3 @@ export default function CarinderiasList() {
         </div>
     )
 }
-
-
-
-
-
-// const [visibleItems, setVisibleItems] = useState(3)
-    // const [visibleCarinderia, setVisibleCarinderia] = useState([])
-    // const loadRef = useRef(null)
-
-    // const itemsPerPage = 3
-
-    // useEffect(() => {
-    //     setVisibleItems(allCarinderias.slice(0,3))
-    // }, [allCarinderias])
-
-    // const loadMore = () => {
-    //     const newCount = visibleItems + itemsPerPage
-    //     const newItems = allCarinderias.slice(newCount)
-    //     setVisibleCarinderia(prev => [...prev, newItems])
-    //     setVisibleItems(newCount)
-    // }
-
-    // const carinderiaCards = useMemo(() => {
-    //     return visibleCarinderia.map(carinderia => (
-    //         <Link className="listing-links">
-    //             <ListingCard
-    //                 className="listing-card-dorms"
-    //                 key={carinderia.id}
-    //                 id={carinderia.id}
-    //                 name={carinderia.name}
-    //                 description={carinderia.description}
-    //                 price={carinderia.price}
-    //                 location={carinderia.location}
-    //                 imageUrl={carinderia.imageUrl}
-    //                 type="Carinderia"
-    //                 cardType="card-carinderia"
-    //                 tags={carinderia.tags}
-    //             />
-    //         </Link>
-    //     ))
-    // }, [visibleCarinderia])

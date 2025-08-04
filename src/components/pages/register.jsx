@@ -41,42 +41,68 @@ export default function Register() {
                     <form>
                         <div className="name-container">
                             <div className="email-container">
-                                <label htmlFor="email">First Name</label>
+                                <label htmlFor="first-name">First Name</label>
                                 <div className="input-email">
                                     <User size={18} color="#64748B" className="icons" />
-                                    <input type="text" placeholder="First name" />
+                                    <input 
+                                        type="text"
+                                        id="first-name" 
+                                        placeholder="First name" 
+                                        autoComplete="given-name"
+                                    />
                                 </div>
                             </div>
                             <div className="email-container">
-                                <label htmlFor="email">Last Name</label>
+                                <label htmlFor="last-name">Last Name</label>
                                 <div className="input-email">
                                     <User size={18} color="#64748B" className="icons" />
-                                    <input type="text" placeholder="Last name" />
+                                    <input 
+                                        type="text"
+                                        id="last-name" 
+                                        placeholder="Last name" 
+                                        autoComplete="family-name"
+                                    />
                                 </div>
                             </div>
                         </div>
+
                         <div className="email-container">
                             <label htmlFor="email">Email</label>
                             <div className="input-email">
                                 <MailIcon size={18} color="#64748B" className="icons" />
-                                <input type="email" placeholder="Enter your email" />
+                                <input 
+                                    type="email"
+                                    id="email" 
+                                    placeholder="Enter your email" 
+                                    autoComplete="email"
+                                />
                             </div>
                         </div>
+
                         <div className="pass-container">
                             <label htmlFor="password">Password</label>
                             <div className="input-pass">
                                 <Lock size={18} color="#64748B" className="icons" />
-                                <input type={showPass ? "text" : "password"} placeholder="Enter your password" />
+                                <input 
+                                    type={showPass ? "text" : "password"} 
+                                    id="password"
+                                    placeholder="Enter your password" 
+                                />
                                 <Button className="eye-icon" type="button" onClick={() => setShowPass()} >
                                     {showPass ? <EyeOff size={20} /> : <EyeIcon size={20} />}
                                 </Button>
                             </div>
                         </div>
+
                         <div className="pass-container-reg">
-                            <label htmlFor="password">Confirm Password</label>
+                            <label htmlFor="confirm-pass">Confirm Password</label>
                             <div className="input-pass">
                                 <Lock size={18} color="#64748B" className="icons" />
-                                <input type={confirmPass? "text" : "password"} placeholder="Enter your password" />
+                                <input 
+                                    type={confirmPass? "text" : "password"} 
+                                    id="confirm-pass"
+                                    placeholder="Enter your password" 
+                                />
                                 <Button className="eye-icon" type="button" onClick={() => setConfirmPass()}>
                                     {confirmPass ? <EyeOff size={20} /> : <EyeIcon size={20} /> }
                                 </Button>

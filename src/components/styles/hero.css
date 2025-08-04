@@ -53,7 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch; /* Changed from center */
+    align-items: center; /* Changed from center */
     gap: 0.75rem; /* Reduced from 1rem */
 }
 
@@ -104,7 +104,6 @@
 }
 
 /* RESPONSIVE STYLES */
-
 /* Ultra-wide screens */
 @media (min-width: 1600px) {
     .hero-container {

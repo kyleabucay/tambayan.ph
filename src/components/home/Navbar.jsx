@@ -15,7 +15,7 @@ export default function Navbar() {
                 <div className="home-logo-container">
                     <Link to="/" className="home-logo">
                         <span className="home-logo-text">Tambayan.ph</span>
-                        <img src="public/web-icon/android-chrome-512x512.png" className="logo-image" />
+                        <img src="/web-icon/android-chrome-512x512.png" className="logo-image" />
                     </Link>
                 </div>
 

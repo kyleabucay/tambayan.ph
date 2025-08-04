@@ -261,6 +261,8 @@
 
 
 
+/* FEATURED SECTION MOBILE-RESPONSIVE STYLES */
+
 
 @media (min-width: 768px) {
     .section-title {
@@ -270,6 +272,19 @@
     .listing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .listing-grid.shrink {
+        gap: 1rem;
+    }
+
+    .listing-grid.shrink .listing-card-dorms {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .tags-container {
+        min-height: 2.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -278,7 +293,6 @@
     }
 }
 
-/* FEATURED SECTION MOBILE-RESPONSIVE STYLES */
 @media (max-width: 767px) {
     .featured-section {
         padding: 1.5rem 0.75rem;
@@ -290,7 +304,7 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Mobile tabs adjustments */
+
     .tabs-list-container {
         margin-bottom: 2rem;
         padding: 0 1rem;
@@ -315,14 +329,12 @@
         transform: translateX(calc(var(--active-index, 0) * 100%));
     }
 
-    /* Mobile listing grid */
     .listing-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
+        gap: 1.5rem;
         padding: 0 0.5rem;
     }
 
-    /* Mobile listing cards */
     .listing-card {
         max-width: 100%;
         margin: 0 auto;
@@ -357,10 +369,13 @@
         font-size: 0.9rem;
     }
 
-    /* Mobile badges */
     .tags-container {
         padding: 0.6rem;
         gap: 0.3rem;
+        min-height: 2.25rem; /* Fixed height for uniformity */
+        align-items: center;
+        flex-wrap: nowrap; /* Prevent wrapping for consistency */
+        overflow: hidden; /* Hide overflow tags */
     }
 
     .badges {
@@ -368,7 +383,6 @@
         padding: 3px 8px;
     }
 
-    /* Mobile view button */
     .view-button {
         width: 40%;
         margin: 1.5rem auto;
@@ -376,7 +390,6 @@
         font-size: 0.95rem;
     }
 
-    /* Mobile heart and badge positioning */
     .heart-fav {
         height: 2rem;
         width: 2rem;
@@ -389,6 +402,12 @@
         padding: 3px 10px;
         top: 0.4rem;
         left: 0.4rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 766) {
+    .listing-grid {
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
@@ -413,7 +432,8 @@
     }
 
     .listing-grid {
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
         padding: 0 0.25rem;
     }
 
@@ -436,6 +456,10 @@
 
     .tags-container {
         padding: 0.5rem;
+        min-height: 2rem;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 
     .badges {
@@ -475,9 +499,15 @@
     .view-button {
         width: 60%;
     }
+
+    .tags-container {
+        min-height: 1.75rem;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
 }
 
-/* Tablet adjustments */
 @media (min-width: 768px) and (max-width: 1023px) {
     .featured-section {
         padding: 2rem 1.5rem;

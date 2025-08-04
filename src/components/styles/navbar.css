@@ -139,6 +139,7 @@ a {
     font-weight: 600;
     background-color: #000;
     color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .register:hover {
@@ -162,8 +163,8 @@ a {
 }
 
 .hamburger-line {
-    width: 1.75rem;
-    height: 3px;
+    width: 1.5rem;
+    height: 2.5px;
     background-color: #000;
     margin: 3px 0;
     transition: all 0.3s ease;
@@ -173,13 +174,13 @@ a {
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 4rem;
+    top: 3.75rem;
     left: 0;
     width: 100%;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 40;
+    z-index: -1;
 }
 
 .mobile-menu-content {
@@ -208,7 +209,6 @@ a {
 }
 
 /* RESPONSIVE STYLES */
-
 /* Ultra-wide screens */
 @media (min-width: 1600px) {
     .container {
@@ -244,10 +244,6 @@ a {
     .nav-links {
         gap: 1rem;
     }
-    
-    /* .nav-link {
-        font-size: 0.875rem;
-    } */
     
     .search-input {
         width: 11rem;
@@ -330,7 +326,7 @@ a {
     }
 
     .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-        transform: rotate(-45deg) translate(-6.5px, 6px);
+        transform: rotate(-45deg) translate(-5.5px, 6.275px);
     }
 
     .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -338,7 +334,7 @@ a {
     }
 
     .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-        transform: rotate(45deg) translate(-6.5px, -6px);
+        transform: rotate(45deg) translate(-5.5px, -6.275px);
     }
 
     .mobile-nav-links .nav-link {
@@ -360,6 +356,10 @@ a {
         width: 100%;
         padding: 0.875rem 1rem;
         font-size: 1rem;
+    }
+
+    .nav-link:hover::after {
+        width: 6.25rem;
     }
 }
 
@@ -383,8 +383,8 @@ a {
     }
 
     .hamburger-line {
-        width: 1.5rem;
-        height: 2.5px;
+        width: 1rem;
+        height: 1.5px;
     }
 
     .mobile-nav-links .nav-link {
@@ -399,5 +399,9 @@ a {
     .mobile-auth-buttons .auth-btn {
         padding: 0.75rem 1rem;
         font-size: 0.9375rem;
+    }
+
+    .nav-link:hover::after {
+        width: 17.5%;
     }
 }

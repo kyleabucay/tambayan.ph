@@ -6,7 +6,7 @@ import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import DormsList from './components/pages/dorms'
 import CarinderiasList from './components/pages/Carinderias'
-import LayoutRoute from './components/pages/Layout'
+import LayoutRoute from './components/pages/layout'
 import DormDetails from './components/pages/DormDetails'
 import CarinderiaDetails from './components/pages/CarinderiaDetails'
 

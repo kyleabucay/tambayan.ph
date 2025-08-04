@@ -55,7 +55,7 @@ export default function DormsList() {
                 <div className="dorm-header">
                     <h1>Find Your Perfect Dormitory</h1>
                     <p>Discover affordable and comfortable student housing near your school</p>
-                    <div className="search-form-establishments">
+                    <div className="search-form">
                         <div className="search-form-inner">
                             <div className="search-input-container">
                                 <Search className="input-icon" size={18} />
@@ -82,7 +82,7 @@ export default function DormsList() {
             </div>
             <div className="dorm-content">
                 <h2>6 dormitories found</h2>
-                <div className="listing-grid" ref={loadRef}>
+                <div className="listing-grid shrink" ref={loadRef}>
                     {dormCards}
                 </div>
                 {visibleDorms.length < allDorms.length &&

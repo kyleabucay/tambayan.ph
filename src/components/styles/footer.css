@@ -70,3 +70,128 @@ footer > div {
     text-align: center;
     color: #6b7280;
 }
+
+/* RESPONSIVE STYLES (ONLY FOR < 768px) */
+@media (max-width: 767px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+    footer > div {
+        max-width: 100%;
+        padding: 0 0.75rem;
+    }
+    .footer-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "quicklinks connect";
+        gap: 1.5rem;
+    }
+    .footer-grids.main {
+        grid-area: main;
+        margin-right: 0;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(2) {
+        grid-area: quicklinks;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(3) {
+        grid-area: connect;
+        width: 100%;
+    }
+    .footer-grids > h2 {
+        font-size: 1.1rem;
+    }
+    .footer-grids > p, .footer-grids > ul > li {
+        font-size: 0.875rem;
+    }
+    .footer-note {
+        font-size: 0.875rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    footer {
+        padding: 1rem 0;
+    }
+    footer > div {
+        padding: 0 0.5rem;
+    }
+    .footer-column {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "quicklinks connect";
+        gap: 1rem;
+    }
+    .footer-grids.main {
+        grid-area: main;
+        margin-right: 0;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(2) {
+        grid-area: quicklinks;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(3) {
+        grid-area: connect;
+        width: 100%;
+    }
+    .footer-grids > h2 {
+        font-size: 1rem;
+    }
+    .footer-grids > p, .footer-grids > ul > li {
+        font-size: 0.8125rem;
+    }
+    .footer-note {
+        font-size: 0.8125rem;
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 375px) {
+    footer {
+        padding: 0.75rem 0;
+    }
+    footer > div {
+        padding: 0 0.375rem;
+    }
+    .footer-column {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "quicklinks connect";
+        gap: 0.75rem;
+    }
+    .footer-grids.main {
+        grid-area: main;
+        margin-right: 0;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(2) {
+        grid-area: quicklinks;
+        width: 100%;
+    }
+    .footer-grids.shrink:nth-child(3) {
+        grid-area: connect;
+        width: 100%;
+    }
+    .footer-grids > h2 {
+        font-size: 0.9375rem;
+    }
+    .footer-grids > p, .footer-grids > ul > li {
+        font-size: 0.75rem;
+    }
+    .footer-note {
+        font-size: 0.75rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}

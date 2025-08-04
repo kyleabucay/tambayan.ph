@@ -40,19 +40,28 @@ export default function Login() {
                             <span>Or continue with email</span>
                         </div>
                     </div>
-                    <form>
+                    <form id="login-forms" name="login-forms">
                         <div className="email-container">
                             <label htmlFor="email">Email</label>
                             <div className="input-email">
                                 <MailIcon size={18} color="#64748B" className="icons" />
-                                <input type="email" placeholder="Enter your email" />
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    placeholder="Enter your email" 
+                                    autoComplete="email"
+                                />
                             </div>
                         </div>
                         <div className="pass-container">
                             <label htmlFor="password">Password</label>
                             <div className="input-pass">
                                 <Lock size={18} color="#64748B" className="icons" />
-                                <input type={showPass ? "text" : "password"} placeholder="Enter your password" />
+                                <input 
+                                    type={showPass ? "text" : "password"} 
+                                    id="password" 
+                                    placeholder="Enter your password" 
+                                />
                                 <Button className="eye-icon" onClick={() => togglePass()} type="button" >
                                     {showPass ? <Eye size={20} /> : <EyeOff size={20} /> }
                                 </Button>
@@ -60,8 +69,8 @@ export default function Login() {
                         </div>
                         <div className="util-container">
                             <div className="remember-cta">
-                                <input type="checkbox" name="" id="" />
-                                <label htmlFor="">Remember me</label>
+                                <input type="checkbox" name="remember-me" id="remember-me" />
+                                <label htmlFor="remember-me">Remember me</label>
                             </div>
                             <Link className="link">Forgot Password?</Link>
                         </div>
