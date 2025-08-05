@@ -119,9 +119,11 @@ footer > div {
     footer {
         padding: 1rem 0;
     }
+
     footer > div {
         padding: 0 0.5rem;
     }
+    
     .footer-column {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -129,25 +131,31 @@ footer > div {
             "quicklinks connect";
         gap: 1rem;
     }
+    
     .footer-grids.main {
         grid-area: main;
         margin-right: 0;
         width: 100%;
     }
+    
     .footer-grids.shrink:nth-child(2) {
         grid-area: quicklinks;
         width: 100%;
     }
+    
     .footer-grids.shrink:nth-child(3) {
         grid-area: connect;
         width: 100%;
     }
+
     .footer-grids > h2 {
         font-size: 1rem;
     }
+
     .footer-grids > p, .footer-grids > ul > li {
         font-size: 0.8125rem;
     }
+
     .footer-note {
         font-size: 0.8125rem;
         margin-top: 1.25rem;
