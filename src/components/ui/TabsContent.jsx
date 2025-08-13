@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { TabsContext } from "./tabs"
+import { TabsContext } from "./Tabs"
 
 export default function TabsContent({ value, children }) {
     const { active } = useContext(TabsContext)

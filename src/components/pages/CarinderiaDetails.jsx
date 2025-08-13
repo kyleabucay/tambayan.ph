@@ -3,13 +3,9 @@ import { ArrowLeft } from "lucide-react"
 import { Heart, MapPin, User, Calendar, Phone, Mail } from "lucide-react"
 import { mockCarinderia } from ".."
 import Button from "../ui/Button"
-import Card from "../ui/card"
+import Card from "../ui/Card"
 import CardContent from "../ui/CardContent"
 import EmblaCarousel from "../ui/EmblaCarousel"
-import Tabs from "../ui/tabs"
-import TabsList from "../ui/tabslist"
-import TabsTrigger from "../ui/tabstrigger"
-import TabsContent from "../ui/TabsContent"
 
 
 export default function CarinderiaDetails() {

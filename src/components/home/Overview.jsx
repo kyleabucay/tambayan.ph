@@ -1,8 +1,8 @@
-import Card from "../ui/card"
+import Card from "../ui/Card"
 import CardHeader from "../ui/CardHeader"
 import CardContent from "../ui/CardContent"
 import { Star, Search, MapPin } from "lucide-react"
-import Tabs from "../ui/tabs"
+import Tabs from "../ui/Tabs"
 import "../styles/overview.css"
 
 export default function Overview() {

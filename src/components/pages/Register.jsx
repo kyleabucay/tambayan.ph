@@ -1,8 +1,7 @@
-import Card from "../ui/card"
+import Card from "../ui/Card"
 import CardHeader from "../ui/CardHeader"
 import CardContent from "../ui/CardContent"
 import Button from "../ui/Button"
-import { useState } from "react"
 import { Link } from "react-router-dom"
 import { ArrowLeft, MailIcon, Lock, User, EyeOff, EyeIcon } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
