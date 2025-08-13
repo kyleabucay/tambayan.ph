@@ -4,8 +4,8 @@ import CardContent from "../ui/CardContent"
 import Button from "../ui/Button"
 import { Link } from "react-router-dom"
 import { ArrowLeft, MailIcon, Lock, User, EyeOff, EyeIcon } from "lucide-react";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc"
+import { FaFacebook } from "react-icons/fa"
 import useToggle from "../../hooks/useToggle"
 import "../styles/register.css"
 

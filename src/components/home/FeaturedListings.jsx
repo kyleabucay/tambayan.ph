@@ -1,6 +1,6 @@
 import Tabs from "../ui/Tabs"
-import TabsList from "../ui/Tabslist"
-import TabsTrigger from "../ui/Tabstrigger"
+import TabsList from "../ui/TabsList"
+import TabsTrigger from "../ui/TabsTrigger"
 import TabsContent from "../ui/TabsContent"
 import ListingCard from "../ui/ListingCard"
 import { useMemo } from "react"

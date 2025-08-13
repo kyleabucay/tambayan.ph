@@ -8,7 +8,7 @@ import Card from "../ui/Card"
 import CardContent from "../ui/CardContent"
 import EmblaCarousel from "../ui/EmblaCarousel"
 import Tabs from "../ui/Tabs"
-import TabsList from "../ui/Tabslist"
+import TabsList from "../ui/TabsList"
 import TabsTrigger from "../ui/Tabstrigger"
 import TabsContent from "../ui/TabsContent"
 
