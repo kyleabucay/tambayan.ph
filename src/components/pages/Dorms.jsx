@@ -1,5 +1,5 @@
 import Button from "../ui/Button"
-import Input from "../ui/input"
+import Input from "../ui/Input"
 import { Search, MapPin } from "lucide-react"
 import ListingCard from "../ui/ListingCard"
 import { allDorms } from ".."

@@ -1,5 +1,5 @@
 import Button from "../ui/Button"
-import Input from "../ui/input"
+import Input from "../ui/Input"
 import { Search, MapPin } from "lucide-react"
 import { allCarinderias } from ".."
 import { useEffect, useMemo, useRef, useState } from "react"
