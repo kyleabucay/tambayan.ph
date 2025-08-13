@@ -1,4 +1,4 @@
-import Hero from "../home/hero"
+import Hero from "../home/Hero"
 import FeaturedListings from "../home/FeaturedListings"
 import Overview from "../home/Overview"
 import CtaSection from "../home/CtaSection"
