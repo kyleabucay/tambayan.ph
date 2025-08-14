@@ -1,33 +1,3 @@
-export const featuredDorms = [
-    {
-        id: "1",
-        name: "Xavier Residences",
-        description: "Modern dormitory with complete amenities near Xavier University",
-        price: "₱4,000 - ₱6,000",
-        location: "Pueblo de Oro, Cagayan de Oro",
-        imageUrl: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
-        isFavorite: false
-    },
-    {
-        id: "2",
-        name: "University Tower",
-        description: "Affordable student housing with WiFi and clean study areas",
-        price: "₱5,500 - ₱7,000",
-        location: "Upper Balulang, Cagayan de Oro",
-        imageUrl: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80",
-        isFavorite: true
-    },
-    {
-        id: "3",
-        name: "Blue Residences",
-        description: "Students-only dorm with 24/7 security and laundry service",
-        price: "₱3,000 - ₱5,000",
-        location: "Fuente de Oro, Cagayan de Oro",
-        imageUrl: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
-        isFavorite: false
-    }
-]
-
 export const featuredCarinderias = [
     {
         id: "1",

@@ -381,11 +381,6 @@
         font-size: 1.125rem;
     }
 
-    .embla-carousel-viewport {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
     .listing-grid-details {
         gap: 1.5rem;
     }
@@ -432,11 +427,6 @@
 
     .details-sec-1 > p:nth-of-type(2) {
         font-size: 1rem;
-    }
-
-    .embla-carousel-viewport {
-        max-width: 800px;
-        margin: 0 auto;
     }
 
     .listing-grid-details {

@@ -3,14 +3,26 @@ import TabsList from "../ui/TabsList"
 import TabsTrigger from "../ui/TabsTrigger"
 import TabsContent from "../ui/TabsContent"
 import ListingCard from "../ui/ListingCard"
-import { useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "../styles/listings.css"
-import { featuredCarinderias, featuredDorms } from ".."
+import { featuredCarinderias } from ".."
+import { getDorms } from "../../../api"
 
 export default function FeaturedListings() {
+    const [dorms, setDorms] = useState([])
+
+    useEffect(() => {
+        async function loadDorms() {
+            const data = await getDorms()
+            setDorms(data)
+        }
+
+        loadDorms()
+    }, [dorms])
+
     const dormCards = useMemo(() => 
-        featuredDorms.map(dorm => {
+        dorms.map(dorm => {
             return (
                 <ListingCard
                     className="listing-card"
@@ -25,7 +37,7 @@ export default function FeaturedListings() {
                     cardType="card"
                 />
             )}
-        ), []
+        ), [dorms]
     )
 
     const carinderiaCards = featuredCarinderias.map(carinderia => {
