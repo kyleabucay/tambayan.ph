@@ -1,33 +1,3 @@
-export const featuredCarinderias = [
-    {
-        id: "1",
-        name: "Aling Nena's Carinderia",
-        description: "Home-cooked Filipino meals at student-friendly prices",
-        price: "₱60 - ₱100",
-        location: "España Boulevard, Manila",
-        image: "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
-        isFavorite: true,
-    },
-    {
-        id: "2",
-        name: "Kuya Ben's Lutong Bahay",
-        description: "Affordable silog meals and Filipino classics",
-        price: "₱50 - ₱90",
-        location: "P. Noval St, Manila",
-        image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80",
-        isFavorite: false,
-    },
-    {
-        id: "3",
-        name: "Ate Lorna's Eatery",
-        description: "Budget-friendly meals with vegetarian options",
-        price: "₱45 - ₱85",
-        location: "Kalayaan Avenue, Quezon City",
-        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
-        isFavorite: false,
-    }
-]
-
 export const allDorms = [
     {
         id: "1",
@@ -64,7 +34,7 @@ export const allDorms = [
         name: "Student Haven",
         description: "Budget-friendly dormitory with basic amenities",
         price: "₱4,000 - ₱6,000",
-        location: "España Boulevard, Manila",
+        location: "Lumbia, Cagayan de Oro",
         imageUrl:
           "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
         tags: ["Budget", "WiFi", "Near School"],
@@ -74,7 +44,7 @@ export const allDorms = [
         name: "Elite Student Residence",
         description: "Premium dormitory with gym and swimming pool",
         price: "₱12,000 - ₱18,000",
-        location: "BGC, Taguig",
+        location: "Manresa Avenue, Cagayan de Oro",
         imageUrl:
           "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
         tags: ["Premium", "Gym", "Pool", "Security"],
@@ -84,7 +54,7 @@ export const allDorms = [
         name: "Cozy Corner Dorm",
         description: "Small but comfortable rooms near UP Diliman",
         price: "₱5,000 - ₱7,000",
-        location: "Diliman, Quezon City",
+        location: "Manresa Avenue, Cagayan de Oro",
         imageUrl:
           "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
         tags: ["Near UP", "Cozy", "WiFi"],
@@ -95,9 +65,9 @@ export const allCarinderias = [
     {
       id: "1",
       name: "Aling Nena's Carinderia",
-      description: "Home-cooked Filipino meals at student-friendly prices",
+      description: "Student-friendly, home-cooked meals",
       price: "₱60 - ₱100",
-      location: "España Boulevard, Manila",
+      location: "Macasandig, Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
       tags: ["Ulam", "Budget", "Home-cooked"],
@@ -107,17 +77,17 @@ export const allCarinderias = [
       name: "Kuya Ben's Lutong Bahay",
       description: "Affordable silog meals and Filipino classics",
       price: "₱50 - ₱90",
-      location: "P. Noval St, Manila",
+      location: "Gaerlan St., Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80",
       tags: ["Silog", "Breakfast", "Filipino"],
     },
     {
       id: "3",
-      name: "Ate Lorna's Eatery",
+      name: "Ate Tata's Kainan",
       description: "Budget-friendly meals with vegetarian options",
       price: "₱45 - ₱85",
-      location: "Kalayaan Avenue, Quezon City",
+      location: "Velez St., Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
       tags: ["Vegetarian", "Budget", "Healthy"],
@@ -127,7 +97,7 @@ export const allCarinderias = [
       name: "Tito's Merienda Corner",
       description: "Best merienda spot with fresh lumpia and halo-halo",
       price: "₱30 - ₱70",
-      location: "Taft Avenue, Manila",
+      location: "Macanhan, Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tags: ["Merienda", "Lumpia", "Halo-halo"],
@@ -137,7 +107,7 @@ export const allCarinderias = [
       name: "Nanay's Kitchen",
       description: "Traditional Filipino dishes like your mom used to make",
       price: "₱70 - ₱120",
-      location: "Sampaloc, Manila",
+      location: "Xavier Heights, Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",
       tags: ["Traditional", "Ulam", "Home-style"],
@@ -147,7 +117,7 @@ export const allCarinderias = [
       name: "Student's Choice Eatery",
       description: "Quick and affordable meals perfect for busy students",
       price: "₱40 - ₱80",
-      location: "Katipunan, Quezon City",
+      location: "PN Roa St., Cagayan de Oro City",
       imageUrl:
         "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
       tags: ["Student-friendly", "Affordable"],

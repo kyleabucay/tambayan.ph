@@ -5,7 +5,7 @@ import {
     getDoc, 
     getDocs, 
     doc
- } from "firebase/firestore/lite";
+ } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6CGBV8ynz5lAdwYjKJPJkkeiZtVKtb4c",
@@ -20,7 +20,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
+// Database References
 const dormsCollectionRef = collection(db, "featuredDorms")
+const carinderiaCollectionRef = collection(db, "featuredCarinderias")
 
 export async function getDorms() {
     const snapshot = await getDocs(dormsCollectionRef)
@@ -32,7 +34,12 @@ export async function getDorms() {
     return dorms
 }
 
-export async function getDorm(id) {
-    const docRef = doc(db, "featuredDorms", id)
-    const snapshot = await getDoc(docRef)
+export async function getCarinderias() {
+    const snapshot = await getDocs(carinderiaCollectionRef)
+    const carinderias = snapshot.docs.map(document => ({
+        ...document.data(),
+        id: document.id
+    }))
+    
+    return carinderias
 }

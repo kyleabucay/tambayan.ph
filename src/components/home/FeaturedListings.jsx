@@ -6,11 +6,20 @@ import ListingCard from "../ui/ListingCard"
 import { useState, useMemo, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "../styles/listings.css"
-import { featuredCarinderias } from ".."
-import { getDorms } from "../../../api"
+import { getDorms, getCarinderias } from "../../../api"
 
 export default function FeaturedListings() {
     const [dorms, setDorms] = useState([])
+    const [carinderias, setCarinderias] = useState([])
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    async function loadCarinderias() {
+        if (!isLoaded) {
+            const data = await getCarinderias()
+            setCarinderias(data)
+            setIsLoaded(true)
+        }
+    }
 
     useEffect(() => {
         async function loadDorms() {
@@ -19,7 +28,18 @@ export default function FeaturedListings() {
         }
 
         loadDorms()
+
     }, [dorms])
+
+    // useEffect(() => {
+    //     async function loadCarinderias() {
+    //         const data = await getCarinderias()
+    //         setCarinderias(data)
+    //     }
+
+    //     loadCarinderias()
+
+    // }, [carinderias])
 
     const dormCards = useMemo(() => 
         dorms.map(dorm => {
@@ -40,21 +60,23 @@ export default function FeaturedListings() {
         ), [dorms]
     )
 
-    const carinderiaCards = featuredCarinderias.map(carinderia => {
-        return (
-            <ListingCard
-                className="listing-card"
-                key={carinderia.id}
-                id={carinderia.id}
-                name={carinderia.name}
-                description={carinderia.description}
-                price={carinderia.price}
-                location={carinderia.location}
-                imageUrl={carinderia.image}
-                type="Carinderia"
-                cardType="card"
-            />
-        )
+    const carinderiaCards = useMemo(() => {
+        carinderias.map(carinderia => {
+            return (
+                <ListingCard
+                    className="listing-card"
+                    key={carinderia.id}
+                    id={carinderia.id}
+                    name={carinderia.name}
+                    description={carinderia.description}
+                    price={carinderia.price}
+                    location={carinderia.location}
+                    imageUrl={carinderia.image}
+                    type="Carinderia"
+                    cardType="card"
+                />
+            )}
+        ), [carinderias]
     })
 
     return (
@@ -67,7 +89,7 @@ export default function FeaturedListings() {
                 <div className="tabs-list-container">
                 <TabsList>
                     <TabsTrigger value="dormitories">Dormitories</TabsTrigger>
-                    <TabsTrigger value="carinderias">Carinderias</TabsTrigger>
+                    <TabsTrigger value="carinderias" load={() => loadCarinderias()}>Carinderias</TabsTrigger>
                 </TabsList>
                 </div>
 
