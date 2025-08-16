@@ -11,35 +11,64 @@ import { getDorms, getCarinderias } from "../../../api"
 export default function FeaturedListings() {
     const [dorms, setDorms] = useState([])
     const [carinderias, setCarinderias] = useState([])
-    const [isLoaded, setIsLoaded] = useState(false)
+    const [loading, setLoading] = useState({
+        dorms: false,
+        carinderias: false
+    })
 
+    // Load Dorms Async Function
+    async function loadDorms() {
+        if (dorms.length > 0 || loading.dorms) return
+
+        setLoading(prev => ({
+            ...prev,
+            dorms: true
+        }))
+
+        try {
+            const data = await getDorms()
+            setDorms(data)
+        } catch (err) {
+            console.error("Error loading dorms", err)
+        } finally {
+            setLoading(prev => ({
+                ...prev,
+                dorms: false
+            }))
+        }
+    }
+
+    // Load Carinderias Async Function
     async function loadCarinderias() {
-        if (!isLoaded) {
+        if (carinderias.length || loading.carinderias) return
+
+        setLoading(prev => ({
+            ...prev,
+            carinderias: true
+        }))
+
+        try {
             const data = await getCarinderias()
             setCarinderias(data)
-            setIsLoaded(true)
+        } catch(err) {
+            console.error("Error loading carinderias", err)
+        } finally {
+            setLoading(prev => ({
+                ...prev,
+                carinderias: false
+            }))
         }
     }
 
     useEffect(() => {
-        async function loadDorms() {
-            const data = await getDorms()
-            setDorms(data)
-        }
-
         loadDorms()
+    }, [])
 
-    }, [dorms])
-
-    // useEffect(() => {
-    //     async function loadCarinderias() {
-    //         const data = await getCarinderias()
-    //         setCarinderias(data)
-    //     }
-
-    //     loadCarinderias()
-
-    // }, [carinderias])
+    const handleOnValChange = val => {
+        if (val === "carinderias") {
+            loadCarinderias()
+        }
+    } 
 
     const dormCards = useMemo(() => 
         dorms.map(dorm => {
@@ -60,7 +89,7 @@ export default function FeaturedListings() {
         ), [dorms]
     )
 
-    const carinderiaCards = useMemo(() => {
+    const carinderiaCards = useMemo(() => 
         carinderias.map(carinderia => {
             return (
                 <ListingCard
@@ -77,7 +106,8 @@ export default function FeaturedListings() {
                 />
             )}
         ), [carinderias]
-    })
+    )
+
 
     return (
         <section className="featured-section">
@@ -85,24 +115,35 @@ export default function FeaturedListings() {
                 <h2 className="section-title">Featured Listings</h2>
             </div>
             
-            <Tabs defaultValue="dormitories">
+            <Tabs 
+                defaultValue="dormitories"
+                onValueChange={handleOnValChange}
+            >
                 <div className="tabs-list-container">
                 <TabsList>
                     <TabsTrigger value="dormitories">Dormitories</TabsTrigger>
-                    <TabsTrigger value="carinderias" load={() => loadCarinderias()}>Carinderias</TabsTrigger>
+                    <TabsTrigger value="carinderias">Carinderias</TabsTrigger>
                 </TabsList>
                 </div>
 
                 <TabsContent value="dormitories">
                     <div className="listing-grid">
-                        {dormCards}
+                        {loading.dorms ? (
+                            <div className="loading-placeholder">Loading dormitories...</div>
+                        ) : (
+                            dormCards
+                        )}
                     </div>
                     <Link to="/dorms" className="view-button">View All Dormitories</Link>
                 </TabsContent>
 
                 <TabsContent value="carinderias">
                     <div className="listing-grid">
-                        {carinderiaCards}
+                        {loading.carinderias ? (
+                            <div className="loading-placeholder">Loading carinderias...</div>
+                        ) : (
+                            carinderiaCards
+                        )}
                     </div>
                     <Link to="/carinderias" className="view-button">View All Carinderias</Link>
                 </TabsContent>

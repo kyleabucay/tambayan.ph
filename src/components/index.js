@@ -52,12 +52,12 @@ export const allDorms = [
       {
         id: "6",
         name: "Cozy Corner Dorm",
-        description: "Small but comfortable rooms near UP Diliman",
+        description: "Small but comfortable rooms near Xavier University Senior High Campus",
         price: "₱5,000 - ₱7,000",
         location: "Manresa Avenue, Cagayan de Oro",
         imageUrl:
           "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
-        tags: ["Near UP", "Cozy", "WiFi"],
+        tags: ["Near XUSHS", "Cozy", "WiFi"],
       },
 ]
 
@@ -65,9 +65,9 @@ export const allCarinderias = [
     {
       id: "1",
       name: "Aling Nena's Carinderia",
-      description: "Student-friendly, home-cooked meals",
+      description: "Student-friendly, home-cooked meals to make students feel at home",
       price: "₱60 - ₱100",
-      location: "Macasandig, Cagayan de Oro City",
+      location: "Macasandig, Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",
       tags: ["Ulam", "Budget", "Home-cooked"],
@@ -75,9 +75,9 @@ export const allCarinderias = [
     {
       id: "2",
       name: "Kuya Ben's Lutong Bahay",
-      description: "Affordable silog meals and Filipino classics",
+      description: "Affordable, high-quality silog meals and Filipino classics",
       price: "₱50 - ₱90",
-      location: "Gaerlan St., Cagayan de Oro City",
+      location: "Gaerlan St., Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80",
       tags: ["Silog", "Breakfast", "Filipino"],
@@ -87,7 +87,7 @@ export const allCarinderias = [
       name: "Ate Tata's Kainan",
       description: "Budget-friendly meals with vegetarian options",
       price: "₱45 - ₱85",
-      location: "Velez St., Cagayan de Oro City",
+      location: "Velez St., Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
       tags: ["Vegetarian", "Budget", "Healthy"],
@@ -97,7 +97,7 @@ export const allCarinderias = [
       name: "Tito's Merienda Corner",
       description: "Best merienda spot with fresh lumpia and halo-halo",
       price: "₱30 - ₱70",
-      location: "Macanhan, Cagayan de Oro City",
+      location: "Macanhan, Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tags: ["Merienda", "Lumpia", "Halo-halo"],
@@ -107,7 +107,7 @@ export const allCarinderias = [
       name: "Nanay's Kitchen",
       description: "Traditional Filipino dishes like your mom used to make",
       price: "₱70 - ₱120",
-      location: "Xavier Heights, Cagayan de Oro City",
+      location: "Xavier Heights, Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",
       tags: ["Traditional", "Ulam", "Home-style"],
@@ -117,13 +117,19 @@ export const allCarinderias = [
       name: "Student's Choice Eatery",
       description: "Quick and affordable meals perfect for busy students",
       price: "₱40 - ₱80",
-      location: "PN Roa St., Cagayan de Oro City",
+      location: "PN Roa St., Cagayan de Oro",
       imageUrl:
         "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
       tags: ["Student-friendly", "Affordable"],
     },
 ]
 
+const today = new Date()
+const currentDate = today.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+})
 
 export const mockDormitory = {
     id: "1",
@@ -140,8 +146,8 @@ export const mockDormitory = {
     amenities: ["WiFi", "24/7 Security", "Study Area", "Laundry Service"],
     rules: ["No Smoking", "No Pets", "Curfew at 10PM", "No Visitors After 8PM"],
     gender: "Female Only",
-    distance: "0.5km from University",
-    availability: "Available from June 1, 2025",
+    distance: "0.5km from Xavier University Senior High School",
+    availability: `Available from ${currentDate}`,
     images: [
       "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
       "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=800&q=80",
@@ -155,15 +161,15 @@ export const mockCarinderia = {
   name: "Aling Nena's Carinderia",
   description: "Home-cooked Filipino meals at student-friendly prices. A popular spot for students craving affordable yet flavorful dishes.",
   price: "₱60 - ₱100 / meal",
-  location: "España Boulevard, Manila",
-  address: "678 Mabini Street, Sampaloc, Manila, Metro Manila",
+  location: "Macasandig, Cagayan de Oro",
+  address: "NVM Bldg, Tomas Saco St, Cagayan De Oro City, Misamis Oriental",
   contact: {
     phone: "+63 917 123 4567",
     email: "alingnena.carinderia@gmail.com",
   },
   menu: ["Adobo", "Sinigang", "Tinola", "Tortang Talong", "Pork BBQ"],
   tags: ["Ulam", "Budget", "Home-cooked", "Rice Meals"],
-  distance: "300m from University of Santo Tomas",
+  distance: "300m from Corpus Christi School",
   availability: "Open Daily, 8:00 AM  - 9:00 PM",
   images: [
     "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80",

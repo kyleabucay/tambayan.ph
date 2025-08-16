@@ -1,12 +1,18 @@
-import { useState, createContext } from "react"
+import { useState, createContext, useEffect } from "react"
 
 const TabsContext = createContext()
 
 export { TabsContext }
 
-export default function Tabs({ defaultValue, children }) {
+export default function Tabs({ defaultValue, children, onValueChange }) {
     const [active, setActive] = useState(defaultValue)
     
+    useEffect(() => {
+        if (onValueChange) {
+            onValueChange(active)
+        }
+    }, [active, onValueChange])
+
     return (
         <div className="tabs" data-default={defaultValue}>
             <TabsContext.Provider value={{ active, setActive }}>

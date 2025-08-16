@@ -1,7 +1,7 @@
 import React from "react"
 import Card from "./Card"
 import CardContent from "./CardContent"
-import { Heart } from "lucide-react"
+import { Heart, MapPin } from "lucide-react"
 import Button from "./Button"
 import Badge from "./Badge"
 
@@ -28,7 +28,7 @@ function ListingCard({ className, name, description, price, location, imageUrl, 
                 <p>{description}</p>
                 <div className="price-location">
                     <p>{price}</p>
-                    <p>{location}</p>
+                    <p><MapPin size={18}/><span>{location}</span></p>
                 </div>
             </CardContent>
 
